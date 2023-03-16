@@ -9,15 +9,10 @@
   <version>EDD</version>
   <packaging>jar</packaging>
 
-  <name>Práctica 2</name>
+  <name>Poyecto 1</name>
   <description>
-    Práctica 2 de Estructuras de Datos: Pilas, colas, ordenamientos y búsquedas.
+    Proyecto 1, sort usando java y linea de comandos
   </description>
-  <url>https://aztlan.fciencias.unam.mx/gitlab/2023-2-edd/practica2</url>
-  <organization>
-    <name>Canek Peláez Valdés</name>
-    <url>https://aztlan.fciencias.unam.mx/~canek/</url>
-  </organization>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,7 +64,7 @@
 	<configuration>
 	  <archive>
 	    <manifest>
-	      <mainClass>mx.unam.ciencias.edd.Practica2</mainClass>
+	      <mainClass>mx.unam.ciencias.edd.proyecto1.Proyecto1</mainClass>
 	    </manifest>
 	  </archive>
 	</configuration>
@@ -89,7 +84,7 @@
 
     </plugins>
 
-    <finalName>practica2</finalName>
+    <finalName>proyecto1</finalName>
   </build>
 
   <reporting>
