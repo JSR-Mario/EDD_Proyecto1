@@ -1,5 +1,5 @@
-#Estructuras de Datos. Proyecto 1 : sort en java
-##Sosa Romo Juan Mario
+# Estructuras de Datos. Proyecto 1 : sort en java
+## Sosa Romo Juan Mario
 
 ====================
 
