@@ -1,8 +1,6 @@
 # Estructuras de Datos. Proyecto 1 : sort en java
 ## Sosa Romo Juan Mario
 
-====================
-
 ### Fecha de entrega: viernes 17 de Marzo, 2023
 
 El proyecto implementa un ordenador lexicografico parecido a sort en Unix utilizando java y terminal, funciona con 1 o mas archivos de texto como entradas (puede utilizar la entrada estandar o archivos existentes) e imprime utilizando la salida estandar.
