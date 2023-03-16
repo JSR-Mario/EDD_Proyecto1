@@ -6,7 +6,7 @@
 El proyecto implementa un ordenador lexicografico parecido a sort en Unix utilizando java y terminal, funciona con 1 o mas archivos de texto como entradas, o directamente la entrada estandar, y que imprima su su salida en la salida estandar.
 
 
-* Uso
+### Uso
 
 El proyecto se puede compilar utilizando mvn compile.
 
