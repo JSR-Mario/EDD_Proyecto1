@@ -7,18 +7,14 @@ import java.io.IOException;
 public class Proyecto1{
     public static void main(String[] args){
         // Comenzamos por revisar y guardar los argumentos.
-
         Args a = new Args(args);
+        Uso u = new Uso();
 
-        String[] argumentos = a.args();
-
-        for(String i : argumentos){
-            System.out.println(i);
-        }
-
-        if(a.o())
-            System.out.println(a.ruta());
-
-	    System.out.println("Hola " + a.r());
+        /**
+         * Utilizamos varios metodos seguidos de uso y de argumentos aqui, se ve feo, es super illegible
+         * pero ahorramos poquita memoria, muchas lineas de codigo
+         * y nada de esto se va a reutilizar.
+         */
+        u.regresaOrdenado(u.ordena(u.lee(a.entrada()), a.r()), a.oSalida());
     }
 }

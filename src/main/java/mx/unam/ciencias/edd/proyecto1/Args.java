@@ -16,16 +16,12 @@ public class Args {
         this.args = args;
     }
 
-    public String[] args(){ // servia para probar argumentos
-        return args;
-    }
-
     /**
      * Metodo que nos va a dar una lista de Strings (rutas) a los distintos 
-     * archivos que quiere ordenar el usuario
+     * archivos que quiere ordenar el usuario, ignora banderas y salida
      * @return
      */
-    public Lista<String> Entrada(){         // Hacemos uso de listas vistas en clase
+    public Lista<String> entrada(){         // Hacemos uso de listas vistas en clase
         Lista<String> archivos = new Lista<>();
         for(int i = 0; i < args.length; i++){       // Recorremos argumentos
             if(args[i].equals("-o"))                // Si usa -o nos lo saltamos a el y a su argumento (archivo de salida)
@@ -63,7 +59,7 @@ public class Args {
      * @return la ruta o tira null si no hay
      * @throws IllegalArgumentException si se hace mal uso (no se incluye el archivo de salida usando -o)
      */
-    public String ruta(){
+    public String oSalida(){
         for(int i =0; i<args.length; i++)      // Necesito recorrer de manera que me deje acceder facilmente al siguiente
             if(args[i].equals("-o"))
                 if(i<args.length-1)            // Necesitamos verificar que tenga algo despues antes de intentar regresarlo
