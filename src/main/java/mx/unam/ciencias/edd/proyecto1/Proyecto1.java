@@ -12,16 +12,22 @@ import java.io.IOException;
 public class Proyecto1{
     public static void main(String[] args){
         // Comenzamos por revisar y guardar los argumentos.
-        Args a = new Args(args);
+        //Args a = new Args(args);
 
         // Obtenemos referencia a metodos de uso, para solo tener aqui el main.
-        Uso u = new Uso();
+        //Uso u = new Uso();
 
         /**
          * Utilizamos varios metodos seguidos de uso y de argumentos aqui, se ve feo, es super illegible
          * pero ahorramos poquita memoria, muchas lineas de codigo
          * y nada de esto se va a reutilizar.
          */
-        u.regresaOrdenado(u.ordena(u.lee(a.entrada()), a.r()), a.oSalida());
+        //u.regresaOrdenado(u.ordena(u.lee(a.entrada()), a.r()), a);
+
+        String s = "Á á a à ä, ñ f () 564r46!$%%/&()= hola HOLA hàLo höla";
+        Linea l = new Linea(s);
+        System.out.println(l.linea());
+        System.out.println(l.formateada());
+
     }
 }

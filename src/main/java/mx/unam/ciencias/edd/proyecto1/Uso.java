@@ -54,7 +54,7 @@ public class Uso {
      * @param lineas lista de lineas que tiene el archivo
      * @throws IOException Si BW encuentra algun problema
      */
-    public  void regresaOrdenado(Args a, Lista<linea> lineas) throws IOException{
+    public  void regresaOrdenado(Args a, Lista<Linea> lineas) throws IOException{
         ReadWrite rw = new ReadWrite();
         if(!a.o())
             for(Linea l : lineas)

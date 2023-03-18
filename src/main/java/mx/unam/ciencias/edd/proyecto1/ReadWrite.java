@@ -61,6 +61,7 @@ public class ReadWrite {
     public void write(String archivoSalida, Lista<Linea> lineas)throws IOException{
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(archivoSalida))); 
         for(Linea l : lineas)
-            writer.write(l.toString+"\n");
+            writer.write(l.linea()+"\n");
+        writer.close();    
     }    
 }
