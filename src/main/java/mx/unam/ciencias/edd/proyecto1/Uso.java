@@ -1,6 +1,7 @@
 package mx.unam.ciencias.edd.proyecto1;
 import mx.unam.ciencias.edd.Lista;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 
@@ -34,9 +35,11 @@ public class Uso {
      */
     public Lista<Linea> lee(Lista<String> archivos) throws IOException{
         Lista<Linea> lineas = new Lista<>();
+        //Lista<BufferedReader> entradasBR= null;
         ReadWrite rw = new ReadWrite();
         try{
-            lineas= rw.read(archivos);       // Cada archivo regresa un buffered Reader, juntar metodos para regresar de lineas
+            //entradasBR = rw.readBR(archivos);
+            lineas= rw.read(archivos);      
         }catch(IOException ioe){
             System.err.println("Error␣al␣leer␣el␣contenido␣de␣");
             System.err.println(archivos);
@@ -59,14 +62,13 @@ public class Uso {
         if(!a.o())
             for(Linea l : lineas)
                 System.out.println(l.toString());
-        String salida = a.oSalida();
-        try{
-            rw.write(salida, lineas);
-        }catch(IOException ioe){
-            System.err.println("Error al escribir al archivo");
+        else{
+            String salida = a.oSalida();
+            try{
+                rw.write(salida, lineas);
+            }catch(IOException ioe){
+                System.err.println("Error al escribir al archivo");
+            }
         }
-    }
-
-
-    
+    }    
 }

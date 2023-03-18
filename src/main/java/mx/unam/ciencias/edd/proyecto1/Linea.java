@@ -67,4 +67,12 @@ public class Linea {
     public String linea(){
         return linea;
     }    
+
+    /**
+     * Si no hago esto al imprimir las lineas me dara una referencia
+     * en memoria de cada una de las lineas y no su contenido
+     */
+    @Override public String toString() {
+        return linea;
+    }
 }

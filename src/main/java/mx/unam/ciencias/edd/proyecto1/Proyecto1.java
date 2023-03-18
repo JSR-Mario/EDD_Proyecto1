@@ -1,7 +1,8 @@
 package mx.unam.ciencias.edd.proyecto1;
-import mx.unam.ciencias.edd.Lista;
-import java.io.BufferedReader;
 import java.io.IOException;
+
+import mx.unam.ciencias.edd.Lista;
+//import java.io.IOException;
 
 /**
  * Desde aqui corre todo el proyecto.
@@ -10,24 +11,18 @@ import java.io.IOException;
  * en teoria es lo que se debe hacer con POO.
  */
 public class Proyecto1{
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         // Comenzamos por revisar y guardar los argumentos.
-        //Args a = new Args(args);
+        Args a = new Args(args);
 
         // Obtenemos referencia a metodos de uso, para solo tener aqui el main.
-        //Uso u = new Uso();
+        Uso u = new Uso();
 
         /**
          * Utilizamos varios metodos seguidos de uso y de argumentos aqui, se ve feo, es super illegible
          * pero ahorramos poquita memoria, muchas lineas de codigo
          * y nada de esto se va a reutilizar.
          */
-        //u.regresaOrdenado(u.ordena(u.lee(a.entrada()), a.r()), a);
-
-        String s = "Á á a à ä, ñ f () 564r46!$%%/&()= hola HOLA hàLo höla";
-        Linea l = new Linea(s);
-        System.out.println(l.linea());
-        System.out.println(l.formateada());
-
+        u.regresaOrdenado(a, u.ordena(u.lee(a.entrada()), a.r()));
     }
 }

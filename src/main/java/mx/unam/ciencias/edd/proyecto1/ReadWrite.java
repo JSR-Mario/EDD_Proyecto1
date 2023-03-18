@@ -29,9 +29,10 @@ public class ReadWrite {
     public Lista<Linea> read(Lista<String> entrada) throws IOException{
         Lista<BufferedReader> entradasBR = new Lista<>();
         Lista<Linea> entradaLinea = new Lista<>();
-        String linea;
-        if(entrada.esVacia())      // Si no nos dio un archivo de entrada 
+        
+        if(entrada.esVacia()){      // Si no nos dio un archivo de entrada 
             entradasBR.agregaFinal(new BufferedReader(new InputStreamReader(System.in)));       //abrimos para escribir   
+        }
         else{
             for(String archivo : entrada){      // Nos dieron 1 o mas archivos
                 try{
@@ -42,9 +43,9 @@ public class ReadWrite {
                 }
             }
         }
+        String linea;
         for(BufferedReader e : entradasBR){     // Para cada BR leemos la linea en un string y si es no vacia (llegamos al final) la agregamos a nuestra lista de lineas;
-            linea= e.readLine();
-            while(linea!=null)
+            while((linea = e.readLine()) !=null)
                 entradaLinea.agregaFinal(new Linea(linea));
         }
         return entradaLinea;
@@ -59,9 +60,17 @@ public class ReadWrite {
      * @throws IOException si BW tiene error
      */
     public void write(String archivoSalida, Lista<Linea> lineas)throws IOException{
-        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(archivoSalida))); 
-        for(Linea l : lineas)
-            writer.write(l.linea()+"\n");
-        writer.close();    
+        if(archivoSalida!=null){
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(archivoSalida))); 
+            for(Linea l : lineas)
+                writer.write(l.linea()+"\n");
+            writer.close();    
+        }
+        else{
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+            for(Linea l : lineas)
+                writer.write(l.linea()+"\n");
+            writer.close();
+        }
     }    
 }
