@@ -26,7 +26,7 @@ public class ReadWrite {
      * @return  la lista de lineas de cada entrada
      * @throws IOException si BR tiene error
      */
-    public Lista<Linea> procesaEntrada(Lista<String> entrada) throws IOException{
+    public Lista<Linea> read(Lista<String> entrada) throws IOException{
         Lista<BufferedReader> entradasBR = new Lista<>();
         Lista<Linea> entradaLinea = new Lista<>();
         String linea;
